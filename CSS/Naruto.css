@@ -1,0 +1,98 @@
+#body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    margin: 0;
+}
+
+#header {
+    background-color: rgb(25, 25, 25);
+}
+
+.flex {
+    display: flex;
+}
+
+#image {
+    height: 50px;
+    width: 100px;
+    margin: 30px 30px 30px 30px;
+    cursor: pointer;
+}
+
+.PH {
+    margin: 45px 10px 10px 10px;
+    padding: 0% auto;
+    cursor: pointer;
+}
+
+#main {
+    background-color: rgb(25, 25, 25);
+    display: flex;
+}
+
+.mainuno {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1% 0 2%;
+    width: 68%;
+}
+
+.divu {
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    margin: 0% 0 1% 0;
+    width: 100%;
+}
+
+img {
+    margin: 2%;
+    width: 200px;
+}
+
+.sin {
+    font-size: 20px;
+}
+
+.p {
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    margin: 30px 20px 20px 0;
+    padding: 2%;
+
+}
+
+.categoy {
+    background-color: rgb(50, 50, 50);
+}
+
+.divd {
+    background-color: rgb(32, 32, 32);
+    flex-direction: column;
+    margin: 1% 0 1% 0;
+    text-align: center;
+}
+
+.PA {
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.divt {
+    background-color: rgb(32, 32, 32);
+    margin: 1% 0 2% 0;
+}
+
+.navl {
+    display: flex;
+    text-align: center;
+}
+
+.AL {
+    background-color: rgb(50, 50, 50);
+    margin: 5px 10px 5px 10px;
+    padding: 0 8px 0 8px;
+    border-radius: 10px;
+    color: white;
+}
