@@ -1,28 +1,232 @@
-#body {
-    background-color: rgb(25, 25, 25);
-    color: white;
+:root {
+    --bg: #191919;
+    --surface: #202020;
+    --surface-alt: #323232;
+    --accent: #4f6ef9;
+    --text: #ffffff;
+    --muted: #d1d1d1;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body {
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    padding: 1rem 2rem;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
     margin: 0;
 }
 
-#header {
-    background-color: rgb(25, 25, 25);
+.nav-links a {
+    font-weight: 600;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
 }
 
-.flex {
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.user-circle {
+    position: relative;
+}
+
+.user-btn {
+    min-width: 40px;
+    width: auto;
+    height: 40px;
+    padding: 0 0.75rem;
+    border-radius: 999px;
+    background: var(--surface-alt);
+    border: 2px solid var(--muted);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.user-btn img.user-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-placeholder {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-placeholder .user-icon {
+    font-size: 1rem;
+}
+
+.user-btn:hover {
+    background: rgb(50, 50, 50);
+    border-color: white;
+}
+
+.user-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 0.5rem 0;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.user-circle:hover .user-menu {
     display: flex;
 }
 
-#image {
-    height: 50px;
-    width: 100px;
-    margin: 30px 30px 30px 30px;
+.user-menu a {
+    padding: 0.75rem 1rem;
+    display: block;
+    transition: background 0.2s ease;
+    font-weight: 500;
+}
+
+.user-menu a:hover {
+    background: var(--surface-alt);
+}
+
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.74);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 2rem;
+    width: min(420px, calc(100% - 2rem));
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-.PH {
-    margin: 45px 10px 10px 10px;
-    padding: 0% auto;
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: var(--bg);
+    color: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
     cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-submit:hover {
+    background: #6888ff;
 }
 
 #main {
